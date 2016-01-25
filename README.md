@@ -4,8 +4,8 @@ Resultat is a mechanical sans-serif with a humanistic touch that I made as a par
 
 Resultat was made in 2012 as a part of my bachelors thesis at [Arcada Universtiy of Applied Sciences](http://arcada.fi/). Special thanks to Christoffer Leka, Jutta Törnqvist and Saku Heinänen.
 
-**[Download project](https://github.com/mlindholm/resultat/archive/master.zip)**  
-**[Print specimen](https://github.com/mlindholm/resultat/raw/master/documentation/Resultat-Specimen.pdf)**
+**[Download project (Source, OTF, Specimen)](https://github.com/mlindholm/resultat/archive/master.zip)**  
+**[Download PDF specimen](https://github.com/mlindholm/resultat/raw/master/documentation/Resultat-Specimen.pdf)**
 
 ## Specimen
 
