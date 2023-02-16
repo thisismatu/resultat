@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Resultat';
+    src: url('assets/Resultat-Regular.woff2') format('woff2'),
+        url('assets/Resultat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
