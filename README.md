@@ -6,7 +6,7 @@ Resultat was made in 2012 as a part of my bachelors [thesis](https://www.theseus
 
 - [Download project source](https://github.com/mlindholm/resultat/archive/master.zip)
 - [PDF specimen](specimen/Resultat-Specimen.pdf)
-- [Web specimen](https://thisismatu.github.io/resultat/)
+- [Web specimen](https://resultat.mathiaslindholm.com/)
 
 ## Specimen
 
