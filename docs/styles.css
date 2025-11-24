@@ -14,10 +14,37 @@
   }
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: var(--bg);
   color: var(--fg);
   font-family: "Resultat", sans-serif;
+  padding-top: 3rem;
+}
+
+hr {
+  margin: 2rem 0;
+  border-color: var(--border);
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  color: var(--dim);
+  width: fit-content;
+}
+
+td {
+  padding: 0 1.5rem 0 0;
+}
+
+a {
+  text-decoration: underline solid currentColor 1px;
+  text-underline-offset: 3px;
 }
 
 .main {
@@ -33,11 +60,25 @@ body {
 .header {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
+  background-color: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(0.5rem);
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  position: sticky;
+  top: 0;
 }
 
 .header span {
   margin-right: auto;
+}
+
+.header a {
+  text-decoration-color: transparent;
+}
+
+.header a:hover {
+  text-decoration-color: currentColor;
 }
 
 .hero {
@@ -51,35 +92,57 @@ body {
   margin-bottom: 10vw;
 }
 
-.hero p {
-  max-width: 75ch;
-  font-size: 1.125rem;
-  margin-top: 1em;
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-start;
+  gap: 1.25rem 3rem;
+  line-height: 1.625;
+
+  @media (min-width: 960px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-@media only screen and (min-width: 960px) {
-  .hero p {
-    font-size: 1.5rem;
+.preview {
+  margin-bottom: 2rem;
+
+  @media (min-width: 960px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.preview p {
+  font-size: 48px;
+  line-height: 1.125;
+  text-align: center;
+  text-wrap: balance;
+
+  @media (min-width: 960px) {
+    font-size: 120px;
   }
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: -2rem;
+}
+
+.specimen {
+  text-wrap: pretty;
 }
 
 .specimen-label {
   color: var(--dim);
+  font-size: 0.875rem;
   margin-bottom: 1rem;
 }
 
 .specimen-xxxl {
   font-size: 96px;
-  line-height: 1.125;
-}
+  line-height: 1.0625;
 
-@media only screen and (min-width: 960px) {
-  .specimen-xxxl {
+  @media (min-width: 960px) {
     font-size: 256px;
   }
 }
@@ -87,10 +150,8 @@ body {
 .specimen-xxl {
   font-size: 72px;
   line-height: 1.125;
-}
 
-@media only screen and (min-width: 960px) {
-  .specimen-xxl {
+  @media (min-width: 960px) {
     font-size: 192px;
   }
 }
@@ -98,48 +159,40 @@ body {
 .specimen-xl {
   font-size: 56px;
   line-height: 1.25;
-}
 
-@media only screen and (min-width: 960px) {
-  .specimen-xl {
+  @media (min-width: 960px) {
     font-size: 144px;
   }
 }
 
 .specimen-l {
   font-size: 48px;
-  line-height: 1.375;
-}
+  line-height: 1.25;
 
-@media only screen and (min-width: 960px) {
-  .specimen-l {
-    font-size: 96px;
+  @media (min-width: 960px) {
+    font-size: 72px;
   }
 }
 
 .specimen-m {
   font-size: 40px;
   line-height: 1.375;
-}
 
-@media only screen and (min-width: 960px) {
-  .specimen-l {
-    font-size: 64px;
+  @media (min-width: 960px) {
+    font-size: 48px;
   }
 }
 
 .specimen-s {
   font-size: 32px;
-  line-height: 1.5;
+  line-height: 1.375;
 }
 
 .specimen-xs {
   font-size: 20px;
   line-height: 1.5;
-}
 
-@media only screen and (min-width: 960px) {
-  .specimen-xs {
+  @media (min-width: 960px) {
     column-count: 2;
     column-gap: 2rem;
   }
@@ -148,10 +201,8 @@ body {
 .specimen-xxs {
   font-size: 16px;
   line-height: 1.625;
-}
 
-@media only screen and (min-width: 960px) {
-  .specimen-xxs {
+  @media (min-width: 960px) {
     column-count: 3;
     column-gap: 1.75rem;
   }
@@ -174,10 +225,8 @@ body {
   height: 3rem;
   margin-top: -1px;
   margin-left: -1px;
-}
 
-@media only screen and (min-width: 960px) {
-  .specimen-table span {
+  @media (min-width: 960px) {
     font-size: 2rem;
     width: 4.5rem;
     height: 4.5rem;
@@ -190,38 +239,18 @@ body {
   max-width: 75ch;
 }
 
-hr {
-  margin: 2rem 0;
-  border-color: var(--border);
-}
-
-table {
-  font-size: 0.875rem;
-  line-height: 1.75;
-  color: var(--dim);
-}
-
-a {
-  text-decoration: underline solid currentColor 1px;
-  text-underline-offset: 3px;
-}
-
 .desktop {
   display: none;
-}
 
-@media only screen and (min-width: 960px) {
-  .desktop {
+  @media (min-width: 960px) {
     display: block;
   }
 }
 
 .mobile {
   display: block;
-}
 
-@media only screen and (min-width: 960px) {
-  .mobile {
+  @media (min-width: 960px) {
     display: none;
   }
 }
