@@ -33,10 +33,10 @@ body {
 .header {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
+  gap: 1rem;
 }
 
-.header *:nth-child(2) {
+.header span {
   margin-right: auto;
 }
 
@@ -48,6 +48,7 @@ body {
   font-size: clamp(4rem, 20vw, 16rem);
   line-height: 1;
   text-indent: -1vw;
+  margin-bottom: 10vw;
 }
 
 .hero p {
@@ -198,6 +199,11 @@ table {
   font-size: 0.875rem;
   line-height: 1.75;
   color: var(--dim);
+}
+
+a {
+  text-decoration: underline solid currentColor 1px;
+  text-underline-offset: 3px;
 }
 
 .desktop {
