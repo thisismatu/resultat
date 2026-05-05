@@ -22,7 +22,6 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   font-family: "Resultat", sans-serif;
-  padding-top: 3rem;
 }
 
 hr {
@@ -63,7 +62,7 @@ a {
   gap: 1.5rem;
   background-color: color-mix(in srgb, var(--bg) 85%, transparent);
   backdrop-filter: blur(0.5rem);
-  font-size: 0.875rem;
+  font-size: 1rem;
   padding: 0.75rem 1.5rem;
   position: sticky;
   top: 0;
